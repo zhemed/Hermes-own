@@ -204,8 +204,6 @@ export default {
       gettingStarted: 'Getting Started',
       configuration: 'Configuration',
       features: 'Features',
-      hermesStudioManual: 'Client Manual',
-      esp32Intro: 'ESP32 Intro',
       platforms: 'Platform Guides',
       api: 'API Reference',
     },
@@ -332,71 +330,6 @@ export default {
       analytics: {
         title: 'Usage Analytics',
         content: 'Track token usage (input/output), estimated costs, cache hit rates, session counts, and model distribution. View 30-day daily trends with interactive charts.',
-      },
-    },
-    hermesStudioManual: {
-      title: 'Hermes-own Client Manual',
-      intro: 'This page publishes the complete Hermes-own 0.6.12 client operations manual. The full manual is currently authored in Chinese and covers day-to-day usage, configuration, operations, acceptance review, internal training, visible navigation, dialogs, status pages, key actions, common workflows, and risk notes.',
-      open: {
-        title: 'Open the full manual',
-        content: 'The uploaded manual preserves the original HTML layout, annotated screenshots, tables, and PDF export. Use the HTML version for online browsing and the PDF version for offline review, archiving, or training distribution.',
-        links: [
-          {
-            label: 'Open the Chinese HTML manual',
-            href: '/docs/hermes-own-0.6.12-full-cn/index.html',
-            description: 'Includes the full table of contents, annotated screenshots, workflow sections, tables, and operational notes.',
-          },
-          {
-            label: 'Download the Chinese PDF manual',
-            href: '/docs/hermes-own-0.6.12-full-cn/hermes-own-0.6.12-full-cn.pdf',
-            description: 'Best for offline reading, archival use, printing, and training handouts.',
-          },
-        ],
-      },
-      scope: {
-        title: 'Scope',
-        rows: [
-          ['Version', 'Hermes-own 0.6.12 client operations manual'],
-          ['Language', 'Full manual in Chinese, with bilingual website entry copy'],
-          ['Coverage', 'Login, chat, history, memory, skills, plugins, files, terminal, jobs, group chat, Kanban, usage, logs, MCP, platform integrations, devices, settings, backup, security, and troubleshooting'],
-          ['Audience', 'Individual users, administrators, support teams, acceptance reviewers, and internal training teams'],
-        ],
-      },
-      maintenance: {
-        title: 'Maintenance note',
-        content: 'When the website, reference docs, Hermes agent docs, and the current client UI differ, the manual treats the currently visible client interface as the operational source of truth. For future releases, replace the uploaded HTML/PDF assets and update the version scope on this page.',
-      },
-    },
-    esp32Intro: {
-      title: 'Hermes ESP32-C3 Device Intro',
-      intro: 'This page publishes the public introduction for the Hermes ESP32-C3 desktop AI conversation box. The device handles the small display, microphone, speaker, physical buttons, and local network connection, while Hermes-own handles model access, speech recognition, speech synthesis, and session execution.',
-      open: {
-        title: 'Open the full intro page',
-        content: 'The uploaded intro page preserves the original HTML layout, product visuals, setup flow, specification notes, pre-purchase checklist, and FAQ. It is useful for public presentation, handoff notes, and quick user orientation.',
-        links: [
-          {
-            label: 'Open the Chinese ESP32 intro page',
-            href: '/docs/hermes-esp32-intro/index.html',
-            description: 'Includes product visuals, hardware highlights, Wi-Fi provisioning notes, Hermes-own connection guidance, specifications, and FAQ.',
-          },
-        ],
-      },
-      overview: {
-        title: 'Device positioning',
-        content: 'This is a desktop hardware entry point for Hermes-own, not an offline standalone large-model device. The ESP32-C3 provides local interaction and status feedback, while AI capability comes from Hermes-own running on a computer or server plus the model, STT, and TTS services configured by the user.',
-      },
-      requirements: {
-        title: 'Requirements',
-        rows: [
-          ['Network', 'The ESP32 device and Hermes-own should communicate on the same local network.'],
-          ['Service address', 'Enter the computer or server LAN IP plus port on the device page; do not use 127.0.0.1.'],
-          ['Voice capability', 'Hermes-own needs working speech recognition, speech synthesis, and model services.'],
-          ['Best fit', 'Built for Hermes-own users, ESP32/Arduino/PlatformIO makers, open hardware customization, and desktop AI interaction demos.'],
-        ],
-      },
-      maintenance: {
-        title: 'Maintenance note',
-        content: 'If firmware behavior, provisioning pages, ports, device visuals, or the Hermes-own device connection flow changes, update the static HTML asset and this page scope together.',
       },
     },
     platforms: {

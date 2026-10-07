@@ -35,18 +35,6 @@ const router = createRouter({
           meta: { page: 'features' },
         },
         {
-          path: 'hermes-own-manual',
-          name: 'docs.hermes-own-manual',
-          component: EmptyView,
-          meta: { page: 'hermesStudioManual' },
-        },
-        {
-          path: 'esp32',
-          name: 'docs.esp32',
-          component: EmptyView,
-          meta: { page: 'esp32Intro' },
-        },
-        {
           path: 'platforms',
           name: 'docs.platforms',
           component: EmptyView,

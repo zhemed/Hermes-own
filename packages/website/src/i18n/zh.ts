@@ -204,8 +204,6 @@ export default {
       gettingStarted: '快速开始',
       configuration: '配置说明',
       features: '功能详解',
-      hermesStudioManual: '客户端手册',
-      esp32Intro: 'ESP32 介绍',
       platforms: '平台接入',
       api: 'API 参考',
     },
@@ -332,71 +330,6 @@ export default {
       analytics: {
         title: '用量分析',
         content: '追踪 Token 用量（输入/输出）、预估费用、缓存命中率、会话数和模型分布。查看 30 天日趋势交互图表。',
-      },
-    },
-    hermesStudioManual: {
-      title: 'Hermes-own 客户端完整操作手册',
-      intro: '这份手册面向 Hermes-own 桌面客户端和 Web 界面的使用、配置、运维、验收与内部培训场景，覆盖当前客户端可见导航、设置、弹窗、状态页、关键按钮、常见流程和风险提示。',
-      open: {
-        title: '打开完整手册',
-        content: '完整手册保留原始 HTML 排版、截图标注和 PDF 版本。HTML 版本适合在线浏览，PDF 版本适合归档、打印和离线分发。',
-        links: [
-          {
-            label: '在线打开中文 HTML 手册',
-            href: '/docs/hermes-own-0.6.12-full-cn/index.html',
-            description: '包含目录、截图、表格、风险提示和完整操作章节。',
-          },
-          {
-            label: '下载中文 PDF 手册',
-            href: '/docs/hermes-own-0.6.12-full-cn/hermes-own-0.6.12-full-cn.pdf',
-            description: '适合离线阅读、归档和培训材料分发。',
-          },
-        ],
-      },
-      scope: {
-        title: '适用范围',
-        rows: [
-          ['适用版本', 'Hermes-own 0.6.12 客户端操作手册'],
-          ['文档语言', '中文完整手册；官网提供中英文入口说明'],
-          ['覆盖内容', '登录、聊天、历史、记忆、技能、插件、文件、终端、任务、群聊、看板、用量、日志、MCP、平台集成、设备、设置、备份、安全和故障排除'],
-          ['推荐读者', '个人用户、管理员、技术支持、交付验收人员和内部培训对象'],
-        ],
-      },
-      maintenance: {
-        title: '维护说明',
-        content: '当官网、说明文档、Hermes 智能体文档与当前客户端界面存在差异时，操作步骤以当前客户端实际可见界面为准。后续版本更新时，请同步替换 HTML/PDF 资源并更新本页的适用版本说明。',
-      },
-    },
-    esp32Intro: {
-      title: 'Hermes ESP32-C3 设备介绍',
-      intro: '这页发布 Hermes ESP32-C3 桌面 AI 对话小方盒的官网介绍资料。设备侧负责小屏、麦克风、扬声器、实体按键和局域网连接；Hermes-own 负责模型、语音识别、语音合成和会话运行。',
-      open: {
-        title: '打开完整介绍页',
-        content: '完整介绍页保留原始 HTML 排版、产品图、使用流程、规格说明、购买前须知和常见问题，适合公开展示、交付说明和用户快速了解设备定位。',
-        links: [
-          {
-            label: '在线打开 ESP32 中文介绍页',
-            href: '/docs/hermes-esp32-intro/index.html',
-            description: '包含产品图、硬件亮点、配网教程、连接 Hermes-own 的说明、规格与常见问题。',
-          },
-        ],
-      },
-      overview: {
-        title: '设备定位',
-        content: '这是配合 Hermes-own 使用的桌面硬件入口，不是离线独立大模型设备。ESP32-C3 提供本地交互与状态反馈，AI 能力由电脑端或服务器端 Hermes-own 以及用户配置的模型、STT、TTS 服务提供。',
-      },
-      requirements: {
-        title: '使用前提',
-        rows: [
-          ['网络', 'ESP32 设备和 Hermes-own 需要在同一局域网内通信。'],
-          ['服务地址', '设备端应填写电脑或服务器的局域网 IP + 端口，不能填写 127.0.0.1。'],
-          ['语音能力', '需要在 Hermes-own 中配置可用的语音识别、语音合成和模型服务。'],
-          ['适合用户', '适合 Hermes-own 用户、ESP32/Arduino/PlatformIO 玩家、开源硬件改造和桌面 AI 交互演示场景。'],
-        ],
-      },
-      maintenance: {
-        title: '维护说明',
-        content: '后续如固件、配网页、端口、设备外观或 Hermes-own 设备接入流程变化，请同步更新静态 HTML 资源和本页的适用说明。',
       },
     },
     platforms: {
