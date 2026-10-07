@@ -138,7 +138,7 @@ describe('GlobalAgentServer', () => {
     await nsp.__middleware[0](denied, deniedNext)
     expect(deniedNext.mock.calls[0][0]).toBeInstanceOf(Error)
 
-    const deniedAgent = createMockSocket('socket-denied-agent', { token: 'wrong', role: 'hermes-own' })
+    const deniedAgent = createMockSocket('socket-denied-agent', { token: 'wrong', role: 'hermes-studio' })
     const deniedAgentNext = vi.fn()
     await nsp.__middleware[0](deniedAgent, deniedAgentNext)
     expect(deniedAgentNext.mock.calls[0][0]).toBeInstanceOf(Error)
@@ -262,7 +262,7 @@ describe('GlobalAgentServer', () => {
 
     const agentSocket = createMockSocket('jwt-agent-socket', {
       token: 'user-jwt',
-      role: 'hermes-own',
+      role: 'hermes-studio',
       instanceId: 'device-1',
       profile: 'research',
     })
@@ -350,7 +350,7 @@ describe('GlobalAgentServer', () => {
 
     const first = createMockSocket('agent-old', {
       token: 'user-jwt',
-      role: 'hermes-own',
+      role: 'hermes-studio',
       instanceId: 'device-1',
       profile: 'research',
     })
@@ -364,7 +364,7 @@ describe('GlobalAgentServer', () => {
 
     const second = createMockSocket('agent-new', {
       token: 'user-jwt',
-      role: 'hermes-own',
+      role: 'hermes-studio',
       instanceId: 'device-1',
       profile: 'research',
     })
@@ -390,7 +390,7 @@ describe('GlobalAgentServer', () => {
 
     const agentSocket = createMockSocket('jwt-agent-socket', {
       token: 'user-jwt',
-      role: 'hermes-own',
+      role: 'hermes-studio',
       instanceId: 'device-1',
       profile: 'research',
     })
@@ -401,7 +401,7 @@ describe('GlobalAgentServer', () => {
 
     const otherAgentSocket = createMockSocket('jwt-agent-socket-2', {
       token: 'user-jwt',
-      role: 'hermes-own',
+      role: 'hermes-studio',
       instanceId: 'device-2',
       profile: 'research',
     })
@@ -445,7 +445,7 @@ describe('GlobalAgentServer', () => {
 
     const agentSocket = createMockSocket('jwt-agent-socket', {
       token: 'user-jwt',
-      role: 'hermes-own',
+      role: 'hermes-studio',
       instanceId: 'device-1',
       profile: 'research',
     })
@@ -632,7 +632,7 @@ describe('GlobalAgentServer', () => {
 
     const agentSocket = createMockSocket('jwt-agent-socket', {
       token: 'user-jwt',
-      role: 'hermes-own',
+      role: 'hermes-studio',
       instanceId: 'device-1',
       profile: 'research',
     })
@@ -709,7 +709,7 @@ describe('GlobalAgentServer', () => {
 
     const agentSocket = createMockSocket('jwt-agent-socket', {
       token: 'user-jwt',
-      role: 'hermes-own',
+      role: 'hermes-studio',
       instanceId: 'device-1',
       profile: 'research',
     })
@@ -756,7 +756,7 @@ describe('GlobalAgentServer', () => {
 
     const agentSocket = createMockSocket('jwt-agent-socket', {
       token: 'user-jwt',
-      role: 'hermes-own',
+      role: 'hermes-studio',
       instanceId: 'device-1',
       profile: 'research',
     })

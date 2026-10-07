@@ -8,7 +8,9 @@ import { config } from '../config'
 import { getHermesWebUiVersion } from './system-info'
 
 const ACTIVE_VERSION_FILE = 'active-version.json'
-const DEFAULT_REMOTE_MANIFEST_URL = 'https://github.com/zhemed/Hermes-own/releases/latest/download/versions.json'
+// This fork does not publish a remote version manifest. Leave empty so no outbound
+// request is made; set HERMES_WEB_UI_VERSION_MANIFEST_URL to opt back in.
+const DEFAULT_REMOTE_MANIFEST_URL = ''
 const DEFAULT_DOWNLOAD_BASE_URL = 'https://github.com/zhemed/Hermes-own/releases/latest/download'
 const DEFAULT_GITHUB_REPO = 'zhemed/Hermes-own'
 
@@ -237,6 +239,7 @@ export function listInstalledWebUiVersions(active = readActiveVersionManifest())
 
 async function fetchRemoteVersions(): Promise<{ manifest: RemoteVersionManifest | null; error: string }> {
   const url = process.env.HERMES_WEB_UI_VERSION_MANIFEST_URL?.trim() || DEFAULT_REMOTE_MANIFEST_URL
+  if (!url) return { manifest: null, error: '' }
   try {
     const response = await fetch(url, { signal: AbortSignal.timeout(5000) })
     if (!response.ok) return { manifest: null, error: `GET ${url} returned ${response.status}` }

@@ -261,7 +261,7 @@ describe('studio MCP autoinject', () => {
 
     const updated = await updateConfigYamlForProfileMock.mock.calls[0][1]({
       mcp_servers: {
-        'hermes-own': { command: 'custom-command' },
+        'hermes-studio': { command: 'custom-command' },
       },
     })
     expect(updated.write).toBe(false)

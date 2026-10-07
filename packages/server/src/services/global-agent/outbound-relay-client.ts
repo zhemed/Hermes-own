@@ -232,7 +232,7 @@ class PlainWebSocketRelayClient {
         type: 'mcu.auth',
         token: this.options.relayToken || undefined,
         instanceId: this.options.instanceId || undefined,
-        role: 'hermes-own',
+        role: 'hermes-studio',
       })
     })
 
@@ -1215,7 +1215,7 @@ export class OutboundRelayClient {
       auth: {
         token: this.relayToken || undefined,
         instanceId: this.instanceId || undefined,
-        role: 'hermes-own',
+        role: 'hermes-studio',
       },
       transports: ['websocket', 'polling'],
       reconnection: true,

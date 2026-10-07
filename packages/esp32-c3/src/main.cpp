@@ -3979,7 +3979,7 @@ String mcuSocketAuthJson() {
   json.reserve(mcuAuthToken.length() + selectedProfile.length() + 180);
   json += F("{\"token\":\"");
   json += escapeJson(mcuAuthToken);
-  json += F("\",\"role\":\"hermes-own\",\"instanceId\":\"");
+  json += F("\",\"role\":\"hermes-studio\",\"instanceId\":\"");
   json += escapeJson(deviceId());
   json += F("\",\"profile\":\"");
   json += escapeJson(selectedProfile);

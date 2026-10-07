@@ -220,7 +220,7 @@ function socketRelayError(id: string | undefined, code: string, message: string)
 
 function requestedAgentRole(auth: Record<string, unknown>): boolean {
   const role = String(auth.role || '').trim()
-  return role === 'hermes-own' || role === 'agent'
+  return role === 'hermes-studio' || role === 'agent'
 }
 
 function isRelayHttpResponse(value: NormalizedBody | RelayHttpResponse): value is RelayHttpResponse {

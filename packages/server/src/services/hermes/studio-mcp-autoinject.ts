@@ -6,7 +6,7 @@ import { updateConfigYamlForProfile } from '../config-helpers'
 import { logger } from '../logger'
 import { listProfileNamesFromDisk } from './hermes-profile'
 
-const LEGACY_SERVER_NAME = 'hermes-own'
+const LEGACY_SERVER_NAME = 'hermes-studio'
 const MANAGED_SERVERS = [
   { name: 'hermes-own-api', toolset: 'api' },
   { name: 'hermes-own-devices', toolset: 'devices' },
@@ -15,15 +15,15 @@ const MANAGED_SERVERS = [
 const MANAGED_SERVER_NAMES: Set<string> = new Set(MANAGED_SERVERS.map(server => server.name))
 const LEGACY_SERVER_NAMES = new Set([
   LEGACY_SERVER_NAME,
-  'hermes-own-mcp',
-  'hermes-own-mcp',
+  'hermes-web-ui-mcp',
+  'hermes-studio-mcp',
 ])
 const MANAGED_ENV_KEY = 'HERMES_WEB_UI_MANAGED_MCP'
 const LEGACY_COMMANDS = new Set([
   'hermes-lan-peer-mcp',
   'hermes-devices-mcp',
-  'hermes-own-mcp',
-  'hermes-own-mcp',
+  'hermes-web-ui-mcp',
+  'hermes-studio-mcp',
 ])
 
 export type BundledMcpInjectionStatus = 'injected' | 'updated' | 'unchanged' | 'skipped'
@@ -75,9 +75,6 @@ function isDesktopRuntime(): boolean {
 function candidateBundledMcpScripts(): string[] {
   return [
     process.env.HERMES_WEB_UI_MCP_BIN,
-    join(process.cwd(), 'bin/hermes-own-mcp.mjs'),
-    join(__dirname, '../../bin/hermes-own-mcp.mjs'),
-    join(__dirname, '../../../../../bin/hermes-own-mcp.mjs'),
     join(process.cwd(), 'bin/hermes-own-mcp.mjs'),
     join(__dirname, '../../bin/hermes-own-mcp.mjs'),
     join(__dirname, '../../../../../bin/hermes-own-mcp.mjs'),

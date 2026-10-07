@@ -460,11 +460,10 @@ for (const phrase of [
 
 for (const phrase of [
   'https://github.com/zhemed/Hermes-own/releases/latest/download',
-  'https://github.com/zhemed/Hermes-own/releases/latest/download',
   'checkForUpdatesWithFallback()',
 ]) {
   if (!desktopUpdater.includes(phrase)) {
-    fail(`desktop updater must check Cloudflare first and keep GitHub as fallback: ${phrase}`)
+    fail(`desktop updater must resolve releases from this fork and keep the fallback path: ${phrase}`)
   }
 }
 
