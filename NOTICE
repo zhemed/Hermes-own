@@ -1,0 +1,41 @@
+NOTICE
+======
+
+This repository ("Hermes-own") is an unofficial fork of Ekko Studio,
+formerly known as Hermes Studio and Hermes Web UI.
+
+  Upstream origin : https://github.com/EKKOLearnAI/ekko-studio
+  Base version    : v0.6.25
+  Base commit     : 8620ba9449cc1c0bbfa780cc6dc742f2a5d4f2af
+
+Licensing timeline of the upstream project
+------------------------------------------
+  * Versions up to and including v0.5.16 were released under the MIT License.
+  * From v0.5.17 onward -- including the base version of this fork -- the
+    software is licensed under the Business Source License 1.1 (see ./LICENSE).
+  * Under the Additional Use Grant, non-commercial use (including personal use,
+    education, and research) is permitted. Commercial use -- including but not
+    limited to selling, licensing, SaaS hosting, or embedding in a commercial
+    product -- requires a separate commercial license from the original licensor.
+  * On 2029-05-10 (the Change Date) the license automatically converts to the
+    Apache License 2.0.
+
+Attribution
+-----------
+  Original copyright and all rights in the Licensed Work remain with EKKOLearnAI
+  and the original contributors. The full text of the applicable license is
+  preserved unmodified in ./LICENSE.
+
+No affiliation
+--------------
+  This fork is NOT affiliated with, endorsed by, or sponsored by EKKOLearnAI,
+  Nous Research, or any of their affiliates. "Hermes" and "Hermes Studio" are
+  names used by the original projects. The license grants no trademark rights,
+  and no claim to those marks is made here.
+
+Third-party components
+----------------------
+  This project depends on third-party open-source packages and downloads
+  additional runtime components at build/run time. The principal runtime
+  dependency is "hermes-agent" (https://github.com/NousResearch/hermes-agent),
+  which is licensed under the MIT License and is a separate work.
